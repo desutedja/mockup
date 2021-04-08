@@ -67,3 +67,25 @@
 .btn-store .btn-caption {
   font-size: 24px;
 }
+
+.basic, .basic > th, .basic > td{
+	border:1px solid black;
+}
+
+#userlist {
+	text-align: center;
+}
+
+.bntlist {
+	margin:10px auto;
+	width:70% !important;
+	padding:10px;
+}
+
+.leftpane{
+	border:1px solid blue;
+}
+
+#real > .row{
+	padding:0 13px;
+}

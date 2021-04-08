@@ -76,7 +76,7 @@
 		</div>
 	</div>
 
-	<div class="row">
+	<div class="row" id="mainbody">
 		<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
 			<div style="border:1px solid black;height:100%;">
 				<div class="CenterDiv">Left Column</div>
@@ -93,7 +93,7 @@
 						<div class="form-group row fr">
 							<label for="UserID" class="col-sm-3 col-form-label">User ID</label>
 							<div class="col-sm-9">
-								<input type="text" class="form-control" id="UserID" value="625238261" disabled>
+								<input type="text" class="form-control" id="UserID" value="" disabled>
 							</div>
 						</div>
 						<div class="form-group row fr">
@@ -109,7 +109,7 @@
 							</div>
 						</div>
 						<div style="text-align:right;margin-top:10px;">
-							<button type="submit" class="btn btn-primary">Submit</button>
+							<button type="submit" id="registration" class="btn btn-primary">Register</button>
 						</div>
 					</form>
 				</div>
@@ -146,7 +146,12 @@
 	  $(document).ready(function(){
 		$('.carousel').carousel({
 		  interval: 2000
-		})
+		});
+
+		$("#registration").on("click", function(e){
+			e.preventDefault();
+			$("#mainbody").load("account.html");  
+		});
 	  });
 	</script>
 </footer>

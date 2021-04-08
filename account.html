@@ -1,0 +1,147 @@
+<div class="container" style="height:auto; margin-bottom: 100px;">
+    <ul class="nav nav-tabs">
+        <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#real">Real</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#demo">Demo</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="real" class="tab-pane fade show active">            
+            <div style="margin: 0px 0px 10px;background-color: #8787e6;padding: 15px;text-align: center;">
+                <span>REAL ACCOUNT</span>
+            </div>
+            <div class="row">
+                <div class="leftpane btn-group-vertical col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                    <button type="button" class="btn btn-primary bntlist">Deposit</button>
+
+                    <button type="button" class="btn btn-primary bntlist">Withdraw</button>
+
+                    <a href="#" class="btn btn-store" style="width:70%; font-size: 12px; margin: 5px auto;">
+                        <span class="fa fa-apple fa-3x pull-left"></span> 
+                        <span class="btn-label">Download on the</span>
+                        <span class="btn-caption" style="font-size:17px">App Store</span>
+                    </a>
+                    
+                    <a href="#" class="btn btn-store" style="width:70%; font-size: 12px; margin: 5px auto;">
+                        <span class="fa fa-android fa-3x pull-left"></span> 
+                        <span class="btn-label">Download on the</span>
+                        <span class="btn-caption" style="font-size:17px">Google Play</span>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                            <div style="border:1px solid black;height:100%;">
+                                <div>
+                                    <div style="margin: 0px 0px 10px;background-color: #8787e6;padding: 15px;text-align: center;">
+                                        <span>User Information</span>
+                                    </div>
+                                    <div>
+                                        <table class="table table-striped">
+                                            <tr><td>Server</td><td>servername</td></tr>
+                                            <tr><td>User ID</td><td>823599909</td></tr>
+                                            <tr><td>Password</td><td>123password</td></tr>
+                                            <tr><td>Type</td><td>Basic</td></tr>
+                                            <tr><td>Leverage</td><td>1:500</td></tr>
+                                            <tr><td>Balance</td><td>$100</td></tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>			
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                            <div style="border:1px solid black;height:100%;">
+                                <div>
+                                    <div style="margin: 0px 0px 10px;background-color: #8787e6;padding: 15px;text-align: center;">
+                                        <span>Trading Information</span>
+                                    </div>
+                                    <div>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="text-align: left;padding:0 35px;">
+                                                <div>XAUUSD, SELL 0.01</div>
+                                                <div>1746.50 -> 1741.50</div>
+                                                <div>2021.04.08 11:34</div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="text-align:center">
+                                                $5.00
+                                            </div>
+                                        </div>
+                                        
+                                        <hr />
+
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                <table class="table">
+                                                    <tr><td>S/L</td><td>-</td></tr>
+                                                    <tr><td>T/P</td><td>-</td></tr>
+                                                    <tr><td>ID</td><td>22712537</td></tr>
+                                                </table>
+                                            </div>
+
+                                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                <table class="table">
+                                                    <tr><td>Swap</td><td>0.00</td></tr>
+                                                    <tr><td>Taxes</td><td>0.00</td></tr>
+                                                    <tr><td>Commision</td><td>0.00</td></tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>			
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="demo" class="tab-pane fade">
+            <div style="margin: 0px 0px 10px;background-color: #8787e6;padding: 15px;text-align: center;">
+                <span>DEMO ACCOUNT LIST</span>
+            </div>
+            <div>
+                <table class="table table-striped" width="901" id="userlist" cellspacing="0">
+                    <thead>
+                        <tr class="basic">
+                            <th width="5%" rowspan="2">No</th>
+                            <th colspan="3">Platform Accounts</th>
+                            <th rowspan="2">Date/Time Request</th>
+                            <th width="14%" colspan="2">Status</th>
+                        </tr>
+                        <tr class="basic">
+                            <th width="20%">Type</th>
+                            <th width="20%">Username</th>
+                            <th width="20%">Password</th>
+                            <th width="8%">Status</th>
+                            <th width="8%">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="basic">
+                            <td>1</td>
+                            <td>Demo</td>
+                            <td>123123</td>
+                            <td>demo123123</td>
+                            <td>1 April 2021, 23:31:14</td>
+                            <td>Active</td>
+                            <td><button onclick="deleteDemoAccount('123123')">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <tr class="basic">
+                            <td>2</td>
+                            <td>Demo</td>
+                            <td>3231212</td>
+                            <td>demo123123</td>
+                            <td>2 April 2021, 11:31:14</td>
+                            <td>Active</td>
+                            <td><button onclick="deleteDemoAccount('3231212')">Delete</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                        
+            </div>	
+            <div style="text-align:right;margin-top:10px;">
+                <button type="submit" id="demoaccount" class="btn btn-primary">Request New Demo Account</button>
+            </div>
+        </div>
+    </div>    		
+</div>
