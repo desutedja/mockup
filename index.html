@@ -79,56 +79,24 @@
 	<div class="row" id="mainbody">
 		<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
 			<div style="border:1px solid black;height:100%;">
-				<div class="CenterDiv">Left Column</div>
+				<div class="CenterDiv">
+					<table style="text-align: center;" class="table table-striped leftmenu">
+						<tr><td><a href="#">OPEN ACCOUNT</a></td></tr>
+						<tr><td><a href="#">PROFILE</a></td></tr>
+						<tr><td><a href="#">DEPOSIT</a></td></tr>
+						<tr><td><a href="#">WITHDRAWL</a></td></tr>
+						<tr><td><a href="#">DOWNLOAD</a></td></tr>
+					</table>
+				</div>
 			</div>			
 		</div>
 		
 		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
-			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-					<form>
-						<div>
-							<h4>Create Your Password</h3>
-						</div>
-						<div class="form-group row fr">
-							<label for="UserID" class="col-sm-3 col-form-label">User ID</label>
-							<div class="col-sm-9">
-								<input type="text" class="form-control" id="UserID" value="" disabled>
-							</div>
-						</div>
-						<div class="form-group row fr">
-							<label for="inputPassword" class="col-sm-3 col-form-label">New Password</label>
-							<div class="col-sm-9">
-								<input type="password" class="form-control" id="inputPassword" placeholder="Password">
-							</div>
-						</div>
-						<div class="form-group row fr">
-							<label for="inputPassword2" class="col-sm-3 col-form-label">Confirm Password</label>
-							<div class="col-sm-9">
-								<input type="password" class="form-control" id="inputPassword2" placeholder="Confirm Your Password">
-							</div>
-						</div>
-						<div style="text-align:right;margin-top:10px;">
-							<button type="submit" id="registration" class="btn btn-primary">Register</button>
-						</div>
-					</form>
+			<div>
+				<div style="width: 70%;text-align: center;margin: 0 auto;">
+					<span style="font-size: 30px;">Dengan meng-klik tombol AKTIFKAN, anda akan mengaktifkan akun trading anda</span>
 				</div>
-
-				<div class="rc col-xs-12 col-sm-12 col-md-4 col-lg-4">
-					<div class="CenterDiv">
-						<a href="#" class="btn btn-store">
-							<span class="fa fa-apple fa-3x pull-left"></span> 
-							<span class="btn-label">Download on the</span>
-							<span class="btn-caption">App Store</span>
-						</a>
-						
-						<a href="#" class="btn btn-store">
-							<span class="fa fa-android fa-3x pull-left"></span> 
-							<span class="btn-label">Download on the</span>
-							<span class="btn-caption">Google Play</span>
-						</a>
-					</div>
-				</div>
+				<div style="text-align: center;"><button id="registration" style="width: 50% !important;" type="button" class="btn btn-primary bntlist">AKTIFKAN</button></div>
 			</div>
 		</div>
 	</div>
@@ -150,8 +118,10 @@
 
 		$("#registration").on("click", function(e){
 			e.preventDefault();
-			$("#mainbody").load("account.html");  
+			$("#mainbody").load("chooseacc.html");  
 		});
+
+		
 	  });
 	</script>
 </footer>

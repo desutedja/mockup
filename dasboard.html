@@ -1,0 +1,89 @@
+<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+    <div style="border:1px solid black;height:100%;">
+        <div class="CenterDiv">
+            <table style="text-align: center;" class="table table-striped leftmenu">
+                <tr><td><a href="#">OPEN ACCOUNT</a></td></tr>
+                <tr><td><a href="#">PROFILE</a></td></tr>
+                <tr><td><a href="#">DEPOSIT</a></td></tr>
+                <tr><td><a href="#">WITHDRAWL</a></td></tr>
+                <tr><td><a href="#">DOWNLOAD</a></td></tr>
+            </table>
+        </div>
+    </div>			
+</div>
+
+<div class="col-xs-12 col-sm-12 col-md-10 col-lg-10" style="min-height:410px;">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <div style="border:1px solid black;height:100%;">
+                        <div>
+                            <div style="margin: 0px 0px 10px;background-color: #8787e6;padding: 15px;text-align: center;">
+                                <span>User Information</span>
+                            </div>
+                            <div>
+                                <table class="table table-striped">
+                                    <tr><td>Server</td><td>servername</td></tr>
+                                    <tr><td>User ID</td><td>823599909</td></tr>
+                                    <tr><td>Password</td><td>123password</td></tr>
+                                    <tr><td>Type</td><td>Basic</td></tr>
+                                    <tr><td>Leverage</td><td>1:500</td></tr>
+                                    <tr><td>Balance</td><td>$100</td></tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>			
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <div style="border:1px solid black;height:100%;">
+                        <div>
+                            <div style="margin: 0px 0px 10px;background-color: #8787e6;padding: 15px;text-align: center;">
+                                <span>Trading Information</span>
+                            </div>
+                            <div>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="text-align: left;padding:0 35px;">
+                                        <div>XAUUSD, SELL 0.01</div>
+                                        <div>1746.50 -> 1741.50</div>
+                                        <div>2021.04.08 11:34</div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="text-align:center">
+                                        $5.00
+                                    </div>
+                                </div>
+                                
+                                <hr />
+
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                        <table class="table">
+                                            <tr><td>S/L</td><td>-</td></tr>
+                                            <tr><td>T/P</td><td>-</td></tr>
+                                            <tr><td>ID</td><td>22712537</td></tr>
+                                        </table>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                        <table class="table">
+                                            <tr><td>Swap</td><td>0.00</td></tr>
+                                            <tr><td>Taxes</td><td>0.00</td></tr>
+                                            <tr><td>Commision</td><td>0.00</td></tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>			
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script language="JavaScript" type="text/javascript">
+    $("#liveacc, #demoacc").on("click", function(e){
+        e.preventDefault();
+        $("#mainbody").load("typeacc.html");  
+    });
+</script>
