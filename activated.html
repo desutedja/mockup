@@ -1,0 +1,15 @@
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div>
+        <div style="width: 70%;text-align: center;margin: 0 auto;">
+            <span style="font-size: 30px;">Dengan meng-klik tombol AKTIFKAN, anda akan mengaktifkan akun trading anda</span>
+        </div>
+        <div style="text-align: center;"><button id="registration" style="width: 50% !important;" type="button" class="btn btn-primary bntlist">AKTIFKAN</button></div>
+    </div>
+</div>
+
+<script>
+    $("#registration").on("click", function(e){
+        e.preventDefault();
+        $("#mainbody").load("typeacc.html");  
+    });
+</script>
