@@ -1,0 +1,30 @@
+<div class="history">
+    <table id="hist_trade">
+        <thead style="font-size: 12px;">
+            <tr>
+                <th>Order ID</th>
+                <th>Type</th>
+                <th>Symbol</th>
+                <th>Lots</th>
+                <th>Opening Time</th>
+                <th>Opening Price</th>
+                <th>TP</th>
+                <th>SL</th>
+                <th>Closing Time</th>
+                <th>Closing Price</th>
+                <th>Commision</th>
+                <th>Swap</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+</div>
+<script>
+    $('#hist_trade').DataTable({
+        "language": {
+            "emptyTable": "No data available"
+        }
+    });
+</script>

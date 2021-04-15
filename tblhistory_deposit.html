@@ -1,0 +1,33 @@
+<div class="history">
+    <table id="hist_deposit" class="display">
+        <thead>
+            <tr>
+                <th>Transaction ID</th>
+                <th>Date & Time</th>
+                <th>Amount</th>
+                <th>Comment</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>00000001</td>
+                <td>2 March 2021, 17:23:04</td>
+                <td>$ 100</td>
+                <td>First Time Deposit</td>
+            </tr>
+            <tr>
+                <td>00000002</td>
+                <td>2 April 2021, 10:23:04</td>
+                <td>$ 100</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<script>
+    $('#hist_deposit').DataTable({
+        "language": {
+            "emptyTable": "No data available"
+        }
+    });
+</script>
