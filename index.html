@@ -11,7 +11,7 @@
 </head>
 <body>
 <nav id="topNav" class="navbar navbar-expand-lg navbar-dark bg-dark"> 
-	<a class="navbar-brand mx-auto" href="/">
+	<a class="navbar-brand mx-auto uncategorize" href="#">
 		<!-- https://dummyimage.com/250x110 -->
 		<img class="shadow-sm rounded-circle" src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" alt="logo/brand" width="30" height="24">
 	</a>
@@ -22,16 +22,16 @@
 
 	<div class="collapse navbar-collapse">
 		<ul class="navbar-nav">
-			<li class="nav-item"> <a class="nav-link" href="#">Link</a></li>
-			<li class="nav-item"> <a class="nav-link" href="#">Link</a></li>
-			<li class="nav-item"> <a class="nav-link" href="#">Link</a></li>
-			<li class="nav-item"> <a class="nav-link" href="#">Link</a></li>
+			<li class="nav-item"> <a class="nav-link uncategorize" href="#">Link</a></li>
+			<li class="nav-item"> <a class="nav-link uncategorize" href="#">Link</a></li>
+			<li class="nav-item"> <a class="nav-link " href="#" id="mnudownload">Download</a></li>
+			<li class="nav-item"> <a class="nav-link" href="#" id="mnuarticle">Article</a></li>
 		</ul>
 
 		<ul class="navbar-nav ms-auto">
-			<li class="nav-item"> <a class="nav-link" href="#">About</a></li>
-			<li class="nav-item"> <a class="nav-link" href="#">Contact</a></li>
-			<li class="nav-item"> <a class="nav-link" href="#">Services</a></li>
+			<li class="nav-item"> <a class="nav-link uncategorize" href="#">About</a></li>
+			<li class="nav-item"> <a class="nav-link uncategorize" href="#">Contact</a></li>
+			<li class="nav-item"> <a class="nav-link uncategorize" href="#">Services</a></li>
 		</ul>
 	</div>
 </nav>
@@ -98,6 +98,18 @@
 		});
 
 		$("#mainbody").load("activated.html");
+
+		$("#mnuarticle").on("click",function(){
+			$("#mainbody").load("article.html");
+		});
+
+		$("#mnudownload").on("click",function(){
+			$("#mainbody").load("downloadpage.html");
+		});
+
+		$(".uncategorize").on("click",function(){
+			$("#mainbody").load("activated.html");
+		});
 	  });
 	</script>
 </footer>
