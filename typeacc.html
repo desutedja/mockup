@@ -35,7 +35,7 @@
               </ul>
               <div class="account_btn"> 
                 <a class="btn_block openacc" href="#">Buka Akun</a>
-                <a class="btn_learn" href="#"><span>Pelajari lebih lanjut</span></a>
+                <a class="btn_learn learnmore" href="#"><span>Pelajari lebih lanjut</span></a>
               </div>
             </div>
           </div>
@@ -53,15 +53,17 @@
               <div class="account_notice">
                 <p>Cocok untuk pemula yang belum berpengalaman forex</p>
               </div>
-              <ul class="account_desc">
-                <li><div class="desc_left">Deposit Awal</div><div class="desc_right">$1</div></li>
-                <li><div class="desc_left">Spread</div><div class="desc_right">Mulai dari 1 pip</div></li>
-                <li><div class="desc_left">Volume Order</div><div class="desc_right">0.01 - 1000 lots</div></li>
-                <li><div class="desc_left">Leverage</div><div class="desc_right">sampai dengan 1:3000</div></li>
-              </ul>
+              <div>
+                <ul class="account_desc">
+                  <li><div class="desc_left">Deposit Awal</div><div class="desc_right">$1</div></li>
+                  <li><div class="desc_left">Spread</div><div class="desc_right">Mulai dari 1 pip</div></li>
+                  <li><div class="desc_left">Volume Order</div><div class="desc_right">0.01 - 1000 lots</div></li>
+                  <li><div class="desc_left">Leverage</div><div class="desc_right">sampai dengan 1:3000</div></li>
+                </ul>
+              </div>
               <div class="account_btn"> 
                 <a class="btn_block openacc" href="#">Buka Akun</a>
-                <a class="btn_learn" href="#"><span>Pelajari lebih lanjut</span></a>
+                <a class="btn_learn learnmore" href="#"><span>Pelajari lebih lanjut</span></a>
               </div>
             </div>
           </div>
@@ -87,7 +89,7 @@
               </ul>
               <div class="account_btn"> 
                 <a class="btn_block openacc" href="#">Buka Akun</a>
-                <a class="btn_learn" href="#"><span>Pelajari lebih lanjut</span></a>
+                <a class="btn_learn learnmore" href="#"><span>Pelajari lebih lanjut</span></a>
               </div>
             </div>
           </div>
@@ -97,6 +99,31 @@
         <a href="#" id="back">Kembali</a>
       </div>
     </div>
+</div>
+
+<div class="modal fade" id="modallearnmore" tabindex="-1" aria-labelledby="labellearnmore" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="labellearnmore">Persyaratan Transaksi</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="modalbody">
+            <ul class="listmodal">
+              <li><div class="desc_left">Deposit Awal</div><div class="desc_right">$1</div></li>
+              <li><div class="desc_left">Spread</div><div class="desc_right">Mulai dari 1 pip</div></li>
+              <li><div class="desc_left">Komisi</div><div class="desc_right">$0</div></li>
+              <li><div class="desc_left">Leverage</div><div class="desc_right">sampai dengan 1:3000</div></li>
+              <li><div class="desc_left">Jumlah order maksimum (terbuka dan pending)</div><div class="desc_right">200</div></li>
+              <li><div class="desc_left">Volume Order</div><div class="desc_right">0.01 - 1000 lots</div></li>
+              <li><div class="desc_left">Market Execution</div><div class="desc_right">mulai dari 0,3 sec, STP</div></li>
+            </ul>
+          </div>
+          <div class="modal-footer" style="margin:0 auto;">
+              <button type="button" class="btn btn-primary openac" data-bs-dismiss="modal">Buka Akun Sekarang</button>
+          </div>
+      </div>
+  </div>
 </div>
 
 <style>
@@ -161,6 +188,7 @@
     white-space: nowrap;
     height: 50px;
     padding:10px;
+    margin: 20px 0;
   }
 
   .btn_block{
@@ -180,6 +208,9 @@
     right: -40%;
     width: 40%;
     transition: all .2s cubic-bezier(0.4,0,0.2,1);
+    height: 50px;
+    text-align: center;
+    text-align: -webkit-center;
   }
 
   .btn_learn > span {
@@ -193,6 +224,18 @@
 
   .account_desc{
     list-style-type: none;
+    overflow: auto;
+  }
+
+  .listmodal{
+    list-style-type: none;
+    overflow: auto;
+  }
+
+  .listmodal li {
+    margin: 0px 15px 10px -15px;
+    padding: 25px;
+    border-bottom: 1px solid red;
   }
 
   .desc_left{
@@ -212,6 +255,27 @@
     margin: 0px 15px 10px -15px;;
   }
 
+  .openacc{
+    background-color:blue;
+    font-weight: bold;
+    padding: 10px 0;
+    color:white;
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    height: 50px;
+  }
+
+  a.openacc:hover, a.learnmore:hover {
+    color:#dbdbe0;
+  }
+
+  .learnmore{
+    text-decoration: none;
+    background-color: grey;
+    color:white;
+  }
+
   .account_desc > li:after, .account_desc > li:before {
     clear: both;
   }
@@ -227,7 +291,7 @@
   }
 </style>
 <script language="JavaScript" type="text/javascript">
-  $(".openacc").on("click", function(e){
+  $(".openacc, .openac").on("click", function(e){
       e.preventDefault();
       $("#mainbody").load("openacc.html");  
   });
@@ -236,4 +300,8 @@
         e.preventDefault();
         $("#mainbody").load("index.html");  
     });
+
+  $(".learnmore").on("click",function(){
+    $("#modallearnmore").modal("show");  
+  });
 </script>

@@ -2,16 +2,16 @@
     <div class="container" style="margin: 20px 0;">
         <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                <button class="btn btn-primary btnmn">DEPOSIT</button>
+                <button class="btn btn-primary btnmn" id="mdlDeposit">DEPOSIT</button>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                <button class="btn btn-success btnmn">WITHDRAW</button>
+                <button class="btn btn-success btnmn" id="mdlWithdraw">WITHDRAW</button>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                <button class="btn btn-warning btnmn">INTERNAL TRANSFER</button>
+                <button class="btn btn-warning btnmn" id="mdlTrf">INTERNAL TRANSFER</button>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                <button class="btn btn-secondary btnmn">OPEN NEW ACCOUNT</button>
+                <button class="btn btn-secondary btnmn" id="NewAcc">OPEN NEW ACCOUNT</button>
             </div>
         </div>
     </div>
@@ -39,21 +39,21 @@
                     <tbody>
                         <tr>
                             <td><button class="btn btn-default btn-xs" data-bs-toggle="collapse" data-bs-target="#demo1"><i aria-hidden="true" class="fa fa-eye"></i></button></td>
-                            <td>61237123</td>
+                            <td class="accountid">61237123</td>
                             <td>USD</td>
                             <td>100</td>
                             <td>0</td>
                             <td>0</td>
                             <td>100</td>
                             <td>
-                                <select class="select-action form-select form-select-sm" aria-label=".form-select-sm example">
+                                <select class="selectaccount select-action form-select form-select-sm" aria-label=".form-select-sm example">
                                     <option selected>Open this select Action</option>
                                     <option value="1">Deposit</option>
                                     <option value="2">Withdraw</option>
                                     <option value="3">Internal Transfer</option>
                                 </select>
                             </td>
-                            <td><button>DEPOSIT</button></td>
+                            <td><button class="Depo">DEPOSIT</button></td>
                         </tr>
                         <tr>
                             <td colspan="9" class="hiddenRow">
@@ -102,21 +102,21 @@
 
                         <tr>
                             <td><button class="btn btn-default btn-xs" data-bs-toggle="collapse" data-bs-target="#demo2"><i aria-hidden="true" class="fa fa-eye"></i></button></td>
-                            <td>45225621</td>
+                            <td class="accountid">45225621</td>
                             <td>USD</td>
                             <td>500</td>
                             <td>0</td>
                             <td>0</td>
                             <td>500</td>
                             <td>
-                                <select class="select-action form-select form-select-sm" aria-label=".form-select-sm example">
+                                <select class="selectaccount select-action form-select form-select-sm" aria-label=".form-select-sm example">
                                     <option selected>Open this select Action</option>
                                     <option value="1">Deposit</option>
                                     <option value="2">Withdraw</option>
                                     <option value="3">Internal Transfer</option>
                                 </select>
                             </td>
-                            <td><button>DEPOSIT</button></td>
+                            <td><button class="Depo">DEPOSIT</button></td>
                         </tr>
                         <tr>
                             <td colspan="9" class="hiddenRow">
@@ -233,8 +233,166 @@
             <a href="#" id="back">Kembali</a>
         </div>
     </div>
+
+    <!-- Modal Deposit -->
+    <div class="modal fade" id="modalDeposit" tabindex="-1" aria-labelledby="labelmodalDeposit" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="labelmodalDeposit">Deposit</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row mdl">
+                        <span class="col-xs-6 col-sm-6 col-md-6 col-lg-6 spleft">Balance E-Walet</span>
+                        
+                        <div style="width:50%;" class="input-group col-xs-6 col-sm-6 col-md-6 col-lg-6 spright">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="basic-addon1">$</span>
+                            </div>
+                            <input type="text" class="form-control money" value="1000" aria-describedby="basic-addon1" disabled>
+                          </div>
+                    </div>
+                    <div class="row mdl">
+                        <span class="col-xs-6 col-sm-6 col-md-6 col-lg-6 spleft">Account ID</span>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 spright">
+                            <select id="depositselectaccount" style="width: 80%;display: inline-block;" class="select-action form-select form-select-sm" aria-label=".form-select-sm example">
+                                <option value="61237123" selected>61237123</option>
+                                <option value="45225621">45225621</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mdl">
+                        <span class="col-xs-6 col-sm-6 col-md-6 col-lg-6 spleft">Amount</span>
+                        <div style="width:50%;" class="input-group col-xs-6 col-sm-6 col-md-6 col-lg-6 spright">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="basic-addon2">$</span>
+                            </div>
+                            <input type="text" class="form-control money" placeholder="0" aria-describedby="basic-addon11">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary act" data-bs-dismiss="modal">TOP UP</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end modal deposit-->
+
+    <!-- Modal WD -->
+    <div class="modal fade" id="modalWithdraw" tabindex="-1" aria-labelledby="labelmodalWD" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="labelmodalWD">Withdraw</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row mdl">
+                        <span class="col-xs-6 col-sm-6 col-md-6 col-lg-6 spleft">Account ID</span>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 spright">
+                            <select id="withdrawselectaccount" style="width: 80%;display: inline-block;" class="select-action form-select form-select-sm" aria-label=".form-select-sm example">
+                                <option value="61237123" selected>61237123</option>
+                                <option value="45225621">45225621</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mdl">
+                        <span class="col-xs-6 col-sm-6 col-md-6 col-lg-6 spleft">Balance Account</span>
+                        
+                        <div style="width:50%;" class="input-group col-xs-6 col-sm-6 col-md-6 col-lg-6 spright">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="basic-addon2">$</span>
+                            </div>
+                            <input type="text" class="form-control money" value="1000" aria-describedby="basic-addon1" disabled>
+                          </div>
+                    </div>                    
+                    <div class="row mdl">
+                        <span class="col-xs-6 col-sm-6 col-md-6 col-lg-6 spleft">Amount</span>
+                        <div style="width:50%;" class="input-group col-xs-6 col-sm-6 col-md-6 col-lg-6 spright">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="basic-addon2">$</span>
+                            </div>
+                            <input type="text" class="form-control money" placeholder="0" aria-describedby="basic-addo22">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary act" data-bs-dismiss="modal">Withdraw</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end modal Wd-->
+
+    <!-- Modal Trf -->
+    <div class="modal fade" id="modalTrf" tabindex="-1" aria-labelledby="labelmodalTrf" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="labelmodalTrf">Transfer Internal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row mdl">
+                        <span class="col-xs-6 col-sm-6 col-md-6 col-lg-6 spleft">Dari Account ID</span>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 spright">
+                            <select id="trfFromaccount" style="width: 80%;display: inline-block;" class="select-action form-select form-select-sm" aria-label=".form-select-sm example">
+                                <option value="61237123" selected>61237123</option>
+                                <option value="45225621">45225621</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mdl">
+                        <span class="col-xs-6 col-sm-6 col-md-6 col-lg-6 spleft">Balance Account</span>
+                        
+                        <div style="width:50%;" class="input-group col-xs-6 col-sm-6 col-md-6 col-lg-6 spright">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="basic-addon3">$</span>
+                            </div>
+                            <input type="text" class="form-control money" value="1000" aria-describedby="basic-addon3" disabled>
+                          </div>
+                    </div>
+                    <div class="row mdl">
+                        <span class="col-xs-6 col-sm-6 col-md-6 col-lg-6 spleft">Ke Account ID</span>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 spright">
+                            <select id="trfToaccount" style="width: 80%;display: inline-block;" class="select-action form-select form-select-sm" aria-label=".form-select-sm example">
+                                <option value="61237123" selected>61237123</option>
+                                <option value="45225621">45225621</option>
+                            </select>
+                        </div>   
+                    </div>               
+                    <div class="row mdl">
+                        <span class="col-xs-6 col-sm-6 col-md-6 col-lg-6 spleft">Amount</span>
+                        <div style="width:50%;" class="input-group col-xs-6 col-sm-6 col-md-6 col-lg-6 spright">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="basic-addon2">$</span>
+                            </div>
+                            <input type="text" class="form-control money" placeholder="0" aria-describedby="basic-addon33">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary act" data-bs-dismiss="modal">Transfer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end modal Trf-->
+
 </div>
 <style>
+    .money{
+        text-align: right;
+    }
+    .act{
+        width:70%;
+        margin:0 auto;
+    }
+    .mdl{
+        padding:10px;
+    }
     .select-action{
         width: 70%;
     }
@@ -271,6 +429,48 @@
     }
 </style>
 <script>
+    $("#NewAcc").on("click", function(e){
+        e.preventDefault();
+        $("#mainbody").load("typeacc.html");  
+    });
+
+    $("#mdlDeposit").on("click",function(){
+        $("#depositselectaccount").attr("disabled", false);
+        $("#modalDeposit").modal("show");        
+    });
+
+    $("#mdlWithdraw").on("click",function(){
+        $("#withdrawselectaccount").attr("disabled", false);
+        $("#modalWithdraw").modal("show");        
+    });
+
+    $("#mdlTrf").on("click",function(){
+        $("#trfFromaccount").attr("disabled", false);
+        $("#modalTrf").modal("show");        
+    });
+
+    $(".selectaccount").on("change",function(){
+        if ($(this).val() == 1) {
+            $("#depositselectaccount").val($(this).closest("tr").find(".accountid").html());
+            $("#depositselectaccount").attr("disabled", true);
+            $("#modalDeposit").modal("show");
+        } else if($(this).val() == 2) {
+            $("#withdrawselectaccount").val($(this).closest("tr").find(".accountid").html());
+            $("#withdrawselectaccount").attr("disabled", true);
+            $("#modalWithdraw").modal("show");
+        } else if($(this).val() == 3) {
+            $("#trfFromaccount").val($(this).closest("tr").find(".accountid").html());
+            $("#trfFromaccount").attr("disabled", true);
+            $("#modalTrf").modal("show");
+        }
+    });
+
+    $(".Depo").on("click",function(){
+        $("#depositselectaccount").val($(this).closest("tr").find(".accountid").html());
+        $("#depositselectaccount").attr("disabled", true);
+        $("#modalDeposit").modal("show");
+    });
+    
     $("#back").on("click", function(e){
         e.preventDefault();
         $("#mainbody").load("openacc.html");  
