@@ -1,13 +1,11 @@
-@media (min-width: 990px) {
+@media only screen and (max-width: 990px) {
 	.navbar-brand {
 		position: absolute;
 		left: 50%;
 		transform: translateX(-50%);
 		top: 2%;
 	}
-}
 
-@media screen and (max-width: 990px) {
 	.btn-store {
 		width: 180px !important;
 		padding: 6px 3px !important;
@@ -20,7 +18,7 @@
 }
 
 
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .rc{
 	  margin-top:10px;
   }
@@ -237,7 +235,7 @@
 	background-color: #eaeaea; height: 50px; text-align: center; text-align: -webkit-center;
 }
 
-@media screen and (max-width: 448px) {
+@media only screen and (max-width: 448px) {
 	.lblfixrate{
 		font-size: 10px;
 		top: -35px;
