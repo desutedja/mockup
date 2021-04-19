@@ -22,8 +22,8 @@
                 <span>Overview My Accounts</span>
             </div>
             <div>
-                <table style="width: 90%;border: 1px solid black;margin: 10px auto;">
-                    <thead style="background-color: #eaeaea; height: 50px;">
+                <table class="overviewacc">
+                    <thead class="overviewacchead">
                         <tr>
                             <th></th>
                             <th>Account ID</th>
@@ -382,52 +382,7 @@
     <!--end modal Trf-->
 
 </div>
-<style>
-    .money{
-        text-align: right;
-    }
-    .act{
-        width:70%;
-        margin:0 auto;
-    }
-    .mdl{
-        padding:10px;
-    }
-    .select-action{
-        width: 70%;
-    }
-    .hiddenRow {
-        padding: 0 !important;
-    }
-    .spleft{
-        text-align: left;
-    }
-    .spright{
-        text-align: right;
-        margin-left:-20px;
-    }
-    .accdetail{
-        padding:15px;
-    }
-    .accdetail > .row {
-        border-bottom: 1px solid black;
-        padding:15px 0;
-    }
-    .btnmn{
-        width: 90%;
-        font-weight: bold;
-    }
-    .datepicker{
-        width:200px;
-    }
-    #hist_content{
-        margin:50px 0;
-    }
-    .btnhist{
-        width:90%;
-        padding:10px;
-    }
-</style>
+
 <script>
     $("#NewAcc").on("click", function(e){
         e.preventDefault();
