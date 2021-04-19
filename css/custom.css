@@ -255,4 +255,12 @@
 	.btn_learn > span {
 		width: auto !important;
 	}
+
+	.desc_right {
+		font-size: 12px !important;
+	}
+
+	.desc_left {
+		font-size: 9px
+	}
 }
