@@ -236,10 +236,23 @@
 }
 
 @media only screen and (max-width: 448px) {
-	.lblfixrate{
+	.lblfixrate {
 		font-size: 10px;
 		top: -35px;
 		position: relative;
 		left: 40px;
+	}
+
+	.openacc {
+		width: 60% !important;
+		left:0;
+	}
+
+	.learnmore {
+		right: 0 !important;
+	}
+
+	.btn_learn > span {
+		width: auto !important;
 	}
 }
