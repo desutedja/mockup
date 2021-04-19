@@ -19,6 +19,7 @@
 	}
 }
 
+
 @media screen and (max-width: 768px) {
   .rc{
 	  margin-top:10px;
@@ -29,6 +30,33 @@
   .btn-primary{
 	width: 100%;
   }
+  .overviewacc{
+	display: block; overflow: auto;
+}
+#hist_deposit,#hist_withdraw,#hist_pendingwd,#hist_trade{
+	display: block;
+	overflow:auto;
+}
+
+.overviewacchead > tr > th {
+	font-size: 12px;
+}
+
+.btnhist{
+	margin: 5px 10px;
+}
+
+.lvrg{
+	height: 65px;
+}
+
+.leverage > .form-check-label {
+	font-size: 14px;
+}
+
+.btnmn{
+	margin: 5px 10px;
+}
 }
 
 .fr{
@@ -209,38 +237,11 @@
 	background-color: #eaeaea; height: 50px; text-align: center; text-align: -webkit-center;
 }
 
-  @media screen and (max-width: 448px) {
-	.overviewacc{
-		display: block; overflow: auto;
-	}
-	#hist_deposit,#hist_withdraw,#hist_pendingwd,#hist_trade{
-		display: block;
-		overflow:auto;
-	}
+@media screen and (max-width: 448px) {
 	.lblfixrate{
-        font-size: 10px;
-        top: -35px;
-        position: relative;
-        left: 40px;
-    }
-
-	.overviewacchead > tr > th {
-		font-size: 12px;
+		font-size: 10px;
+		top: -35px;
+		position: relative;
+		left: 40px;
 	}
-
-	.btnhist{
-		margin: 5px 10px;
-	}
-
-	.lvrg{
-		height: 65px;
-	}
-
-	.leverage > .form-check-label {
-		font-size: 14px;
-	}
-
-	.btnmn{
-		margin: 5px 10px;
-	}
-  }
+}
