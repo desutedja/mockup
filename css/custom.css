@@ -203,16 +203,20 @@
 	padding:10px;
 }
 .overviewacc{
-	width: 90%;border: 1px solid black;margin: 10px auto;display: block; overflow: auto;
+	width: 90%;border: 1px solid black;margin: 10px auto;
 }
 .overviewacchead{
 	background-color: #eaeaea; height: 50px; text-align: center; text-align: -webkit-center;
 }
-#hist_deposit,#hist_withdraw,#hist_pendingwd,#hist_trade{
-	display: block;
-	overflow:auto;
-}
+
   @media screen and (max-width: 448px) {
+	.overviewacc{
+		display: block; overflow: auto;
+	}
+	#hist_deposit,#hist_withdraw,#hist_pendingwd,#hist_trade{
+		display: block;
+		overflow:auto;
+	}
 	.lblfixrate{
         font-size: 10px;
         top: -35px;
